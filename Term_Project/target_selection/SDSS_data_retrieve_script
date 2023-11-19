@@ -1,0 +1,9 @@
+SELECT TOP 1000
+ specObjID,objID,run,rerun,camcol,field,mjd,plate,fiberID,ra,dec,dered_u,dered_g,dered_i,z,zErr,zWarning
+FROM SpecPhoto
+WHERE 
+ class = 'galaxy' 
+ and dered_u <= 21
+ and dered_g <= 21
+ and dered_i <= 21
+ and z BETWEEN 0.1 and 0.2
